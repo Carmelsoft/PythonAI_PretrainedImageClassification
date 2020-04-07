@@ -1,0 +1,76 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                  iPhone_01.jpg  label:                     iphone
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Cat_01.jpg  label:                        cat
+{'Dog_01.jpg': ['dog', 'standard poodle, poodle', 0], 'iPhone_01.jpg': ['iphone', 'remote control, remote', 0], 'Dog_02.jpg': ['dog', 'teddy, teddy bear', 0], 'Cat_01.jpg': ['cat', 'tabby, tabby cat, cat', 1]}
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:        standard poodle, poodle
+
+                 iPhone_01.jpg: 
+Real:                     iphone   Classifier:         remote control, remote
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              teddy, teddy bear
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:        standard poodle, poodle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 iPhone_01.jpg: 
+Real:                     iphone   Classifier:         remote control, remote  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              teddy, teddy bear  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+CNN model architecture vgg
+N Images            :   4
+N Dog Images        :   2
+N Not-a-Dog Images  :   2
+% Correct Dogs      : 50.000000
+% Correct Breed     : 0.000000
+% Correct Not-a-Dog : 100.000000
+% Match             : 25.000000
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier:              teddy, teddy bear
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:        standard poodle, poodle
+
+** Total Elapsed Runtime: 0:0:3
